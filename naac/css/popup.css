@@ -1,0 +1,271 @@
+
+/*-------------------------------------------------*/
+/* = 16.REGISTER LOGIN POPUPS 
+/*-------------------------------------------------*/
+ .log-in-pop {
+     position: relative;
+     overflow: hidden;
+    /* height: 100%;
+     */
+    /* bottom: 0px;
+     */
+     background: #fff;
+     width: 60%;
+     margin: 0 auto;
+     margin-top: 10%;
+}
+ .log-in-pop-left {
+     float: left;
+     width: 40%;
+     background: url('../images/login.html') #002147 no-repeat center center;
+     padding: 12.5% 6%;
+     color: #fff;
+     height: 100%;
+     bottom: 0px;
+    /* min-height: 115%;
+     */
+}
+ .log-in-pop-left::before {
+}
+ .log-in-pop-left h1 {
+     color: #fff;
+     font-size: 32px;
+}
+ .log-in-pop-left h1 span {
+     display: block;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     white-space: nowrap;
+     text-transform: capitalize;
+     color: #fff;
+     font-size: 24px;
+}
+ .log-in-pop-left p {
+     color: #fff;
+}
+ .log-in-pop-left h4 {
+     color: #fff;
+     margin-bottom: 15px;
+     margin-top: 15px;
+     border-top: 1px solid #002e63;
+     padding-top: 15px;
+}
+ .log-in-pop-left ul {
+     margin-bottom: 0px;
+}
+ .log-in-pop-left ul li {
+     margin-bottom: 5px;
+}
+ .log-in-pop-left ul li a {
+     display: block;
+     background: #3F51B5;
+     color: #fff;
+     padding: 12px;
+     border-radius: 2px;
+     font-weight: 600;
+     font-size: 14px;
+}
+ .log-in-pop-left ul li:nth-child(1) a {
+     background: #39579A;
+}
+ .log-in-pop-left ul li:nth-child(2) a {
+     background: #F24033;
+}
+ .log-in-pop-left ul li:nth-child(3) a {
+     background: #24A9E6;
+}
+ .log-in-pop-left ul li a i {
+     padding-right: 7px;
+}
+ .log-in-pop-right {
+     float: left;
+     width: 60%;
+     padding: 50px;
+}
+ .log-in-pop-right h4 {
+     font-size: 24px;
+     margin-bottom: 20px;
+}
+ .log-in-pop-right p {
+}
+ .log-in-pop-right a {
+     color: #333;
+}
+ .log-in-pop-right form {
+}
+ .log-in-pop-right form label {
+     font-size: 14px !important;
+     font-weight: 200;
+     left: 15px;
+     top: 14px;
+}
+ .log-in-pop-right form input {
+     border: 1px solid #dfdfdf;
+     padding: 8px;
+     box-sizing: border-box;
+     height: 45px;
+     border-radius: 2px;
+     font-size: 14px;
+     color: #000;
+     margin-bottom: 5px;
+}
+ .log-in-pop-right form textarea {
+     border: 1px solid #dfdfdf;
+     padding: 8px;
+     box-sizing: border-box;
+     height: 70px;
+     border-radius: 2px;
+}
+ .log-in-pop-right form input[type="submit"] {
+     color: #fff;
+     height: 32px;
+}
+ .padd-top {
+     margin-top: 15px;
+}
+ .log-in-btn {
+     background: #f4364f;
+     color: #fff;
+     padding: 2px 10px;
+     font-weight: 600;
+}
+ .pop-close {
+     color: #333;
+     width: 24px;
+     height: 24px;
+     display: inline-block;
+     position: absolute;
+     top: 15px;
+     right: 15px;
+}
+ .pop-close:hover {
+     transform: rotate(180deg);
+}
+ .pop-close img {
+     width: 24px;
+}
+ .modal-open {
+     overflow: inherit !important;
+}
+ .log-ch-bx {
+}
+ .log-ch-bx p {
+}
+ .log-ch-bx p label {
+     left: 1px;
+     top: 10px;
+     color: #727070;
+}
+ .log-ch-bx p input {
+}
+/*-------------------------------------------------*/
+/* = 17.REGISTER LOGIN POPUPS 
+/*-------------------------------------------------*/
+ .in2-top-logo{
+     background: #002147;
+}
+ .in2-search-top{
+     background: #013673;
+     border-top: 1px solid #002147;
+}
+ .in2-main-menu{
+}
+ .in2-main-menu ul li a{
+     color:#fff;
+}
+ .in2-dropdown-content{
+     background-color: #002147;
+     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.37);
+}
+ .in2-dropdown-content li{
+}
+ .in2-dropdown-content li a{
+     border-bottom: 1px solid #032954;
+}
+ .in2-dropdown-content li a:hover{
+     background:#013673;
+}
+ .in2-ban{
+     margin-top: 72px;
+     background: url(../images/pro-bg.jpg) no-repeat center center #333;
+     padding: 80px 0px;
+     background-size: cover;
+     position: relative;
+}
+ .in2-ban:before {
+     content: '';
+     position: absolute;
+     background: linear-gradient(to top, rgba(2, 35, 74, 0.95) 14%, rgba(0, 33, 71, 0.87) 66%);
+     top: 0px;
+     bottom: 0px;
+     left: 0px;
+     width: 100%;
+}
+ .in2-bi{
+     position: relative;
+     overflow: hidden;
+     width: 90%;
+     margin: 0 auto;
+}
+ .in2-bi-left{
+    /* color: #fff;
+     */
+     width: 70%;
+     padding-top: 35px;
+}
+ .in2-bi-left h1{
+     color: #fff;
+     text-transform: capitalize;
+     font-size: 52px;
+}
+ .in2-bi-left p{
+     color: #949494;
+     font-size: 18px;
+}
+ .in2-bi-form{
+     position: relative;
+     overflow: hidden;
+     background: #fff;
+     box-sizing: border-box;
+     padding: 25px;
+     border-radius: 4px;
+     box-shadow: 0px 16px 40px -10px rgb(0, 0, 0);
+     border-bottom: 5px solid #f06433;
+}
+ .in2-bi-form h4{
+     text-align: center;
+}
+ .in2-bi-form input{
+     border: 1px solid #e8e8e8;
+     height: 45px;
+     margin-bottom: 4px;
+}
+ .in2-bi-form label{
+     color: #0e0e0e;
+     left: 20px;
+     top: 15px;
+     font-size: 16px;
+     font-family: 'Open Sans', sans-serif;
+}
+
+ @media screen and (max-width:992px){
+	.ad-log-in {
+		width: 80%;
+		padding: 25px;
+	}
+	 
+     .log-in-pop-left {
+         width: 100%;
+         padding: 7%;
+    }
+     .log-in-pop-right {
+         width: 100%;
+         padding: 7%;
+    }
+     .log-in-pop {
+         width: 75%;
+    }
+     .modal-open .modal {
+         width: 100%;
+    }
+     

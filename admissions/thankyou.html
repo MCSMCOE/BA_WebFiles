@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+<title>Thank You - BIT, Sathy</title>
+<meta name="Description" content="Thank You for Contacting us. Our Executives will get back to you as soon as possible.">
+<link href="img/favicon.png" type="image/x-icon" rel="shortcut icon">
+<link rel="canonical" href="thank_you.html">
+<link href="css-luci/master-thankyou.css" rel="stylesheet">
+<!-- SWITCHER -->
+
+<script src="plugins/jquery/jquery-1.11.3.min.js"></script>
+
+<style>
+
+.iframe-size{
+  width: 400px;
+  height: 250px;
+  margin:30px;
+}
+.thank-you-text {
+    position: absolute;
+    left: 0;
+    top: 15%;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+}
+html,body{
+	
+	height:100%;
+
+}
+body{
+	background-image:url(img/thank.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+		background-color:transparent !important;
+}
+body #wrapper, body .container-fluid{
+	height:100%
+}
+ @media only screen and (max-width: 1200px) {
+      .yamm .nav > li > a{
+        font-size:11px;
+      }
+      .yamm .nav, .yamm .collapse, .yamm .dropup, .yamm .dropdown{
+        padding-left:5px; 
+      }
+   }
+</style>
+
+</head>
+
+
+<body>
+
+  
+  
+  <div id="wrapper"> 
+ 		<div class="container-fluid  position-relative">
+        	<div class="thank-you-text text-center">
+            	<h3>Thank You for Contacting Us.</h3>
+               <p>Our Admission Executives were engaged in multiple calls at the moment.<br>
+			   Please Call <b>89401 26000</b> for faster response (Working days 9am - 4pm). <br>
+			   Meanwhile watch a short video about us.</p>
+               <!--  <p>Thanks for keeping in touch with BIT.
+                 We have sent all the details of the training programme in your given e-mail which includes fee structure, Trainer Details and Upcoming batches. Please go through the received mail.For any further queries, Please feel free to contact us.</p>
+                <p> -->
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/58IMVosCbkk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>-->
+				<iframe class="iframe-size" src="https://www.youtube.com/embed/58IMVosCbkk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <br>
+                <a href="javascript:window.history.back();" class="btn btn-primary custom-btn">Close</a></p>                
+            </div>
+        </div>
+  </div>
+  
+ 
+  <!-- end wrapper --> 
+
+<!-- end layout-theme --> 
+
+
+
+
+
+
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script> 
+
+
+
+
+
+<script>
+
+    //$("#tel5").intlTelInput();   
+     $(".custom-btn5").on("click", function(){
+       if($("#tel5").val().length <= 4 || $("#tel5").val().length > 15){
+        document.getElementById("phone-error5").innerHTML ="Please Enter Valid Contact Number";
+        return false;
+      }
+      else{
+        get_action5();
+      }
+    });
+  </script></body>
+
+
+</html>

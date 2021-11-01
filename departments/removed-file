@@ -1,0 +1,59 @@
+ <!--                        <div class="col-xl-3 col-lg-2 col-md-4 col-sm-5 sticky-top">-->
+                        <!--                            --><?php //include("sidemenu.php"); ?>
+                        <!---->
+                        <!--                            --><?php
+                        //                            $qry_category="SELECT  e_title,e_date,dept_id,e_desc,disp_type,e_url,e_type, MONTH(e_date)em_num,YEAR(e_date)em_year, DAY(e_date)em_date,MONTHNAME(e_date)em_name,SUBSTR(MONTHNAME(e_date),1,3)em_smname FROM  `kasc`.`news_events`  WHERE disp_type='lat_events' AND dept_id=? AND DATE(e_date)>=DATE(NOW()) AND STATUS='1' ORDER BY orderno ";
+                        //                            $stmt = $con->prepare($qry_category);
+                        //                            $stmt->bind_param('i', $id);
+                        //                            $stmt->execute();
+                        //                            echo mysqli_error($con);
+                        //                            $qry_category=$stmt->get_result();
+                        //                            $stmt->close();
+                        //                            if(mysqli_num_rows($qry_category)>0){
+                        //                                ?>
+                        <!--                                <aside class="side-bar">-->
+                        <!--                                    <div class="widget recent-posts-entry">-->
+                        <!--                                        <div class="panel panel-default">-->
+                        <!--                                            <div class="widget recent-posts-entry">-->
+                        <!--                                                <h6 class="widget-title style-1">Upcoming Events</h6>-->
+                        <!--                                                <div class="panel panel-default">-->
+                        <!--                                                    <div class="container panel-body">-->
+                        <!--                                                        <div class="row">-->
+                        <!--                                                            <div class="col-xs-12">-->
+                        <!--                                                                <ul class="list-unstyled list-events demo2">-->
+                        <!--                                                                    --><?php
+                        //
+                        //
+                        //                                                                    while ($rows_mastercategory = mysqli_fetch_assoc($qry_category))
+                        //                                                                    {
+                        //                                                                        ?>
+                        <!--                                                                        <li class="news-item">-->
+                        <!--                                                                            <table cellpadding="4">-->
+                        <!--                                                                                <tr>-->
+                        <!---->
+                        <!--                                                                                    <a href="-->
+                        <?php //echo $rows_mastercategory['e_url'] ?><!--">-->
+                        <!--                                                                                        --><?php //echo $rows_mastercategory['e_title'] ?>
+                        <!--                                                                                        &nbsp;|&nbsp;-->
+                        <!--                                                                                        -->
+                        <?php //echo $rows_mastercategory['em_date']?><!----->
+                        <?php //echo $rows_mastercategory['em_smname']?><!-----><?php //echo $rows_mastercategory['em_year']?>
+                        <!--                                                                                    </a>-->
+                        <!--                                                                                </tr>-->
+                        <!--                                                                            </table>-->
+                        <!--                                                                        </li>-->
+                        <!--                                                                        --><?php
+                        //                                                                    }
+                        //                                                                    ?>
+                        <!---->
+                        <!--                                                                </ul>-->
+                        <!--                                                            </div>-->
+                        <!--                                                        </div>-->
+                        <!--                                                    </div>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </div>-->
+                        <!--                                    </div>-->
+                        <!--                                </aside>-->
+                        <!--                            --><?php //}?>
+                        <!--                        </div>-->

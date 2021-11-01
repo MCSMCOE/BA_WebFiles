@@ -1,0 +1,61 @@
+@media (min-width: 576px) { ... }
+@media (min-width: 768px) { ... }
+@media (min-width: 992px) {
+.styleswitcher{
+display: none;
+}
+}
+@media (min-width: 1200px)
+{
+.styleswitcher{
+display: none;
+}
+}
+@media (min-width: 1440)
+{
+.styleswitcher{
+display: none;
+}
+}
+@media (min-width: 1152)
+{
+.styleswitcher{
+display: none;
+}
+}
+@media (min-width: 1536)
+{
+.styleswitcher{
+display: none;
+}
+}
+@media (min-width: 1440)
+{
+.styleswitcher{
+display: none;
+}
+}
+@media (min-width: 1600)
+{
+.styleswitcher{
+display: none;
+}
+}
+@media (min-width: 1920)
+{
+.styleswitcher{
+display: none;
+}
+}
+@media (min-width: 2048)
+{
+.styleswitcher{
+display: none;
+}
+}
+@media (min-width: 2160)
+{
+.styleswitcher{
+display: none;
+}
+}
