@@ -53,13 +53,13 @@ $head = locdb();
                     <ul class="top-author-link">
 					<li>
                             <a class='blink-bg' href="https://kascsathy.ac.in/admissions/application.php"
-                               target="_blank">Admission Open 2021-2022</a>
+                               target="_blank">Admission Open 2022-2023</a>
                         </li>
 						<li>
                            <a  href="https://camps.kascsathy.ac.in" target="_blank" class="">Alumni</a>
 					    </li>
 						<li>
-                           <a  href="https://kascweb.campusstack.org/nirf/" >NIRF</a>
+                           <a  href="https://kascsathy.ac.in/nirf/" >NIRF</a>
 					    </li>
                        
                         <li><a href="https://camps.kascsathy.ac.in" target="_blank"

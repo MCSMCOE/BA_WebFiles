@@ -87,57 +87,34 @@
                                             </div>
 											<div class="content-block">
 				<!-- Portfolio  -->
-				<div class="section-full content-inner-2 portfolio bg-white" id="portfolio">
-					<div class="container">
-						
-						<div class="clearfix">
-							<ul id="masonry" class=" gallery-listing gallery-grid-4 gallery mfp-gallery text-center">
+				<div class="content-area">
+                <div class="container">
+				<div class="row">
 								<?php
 								$qry_category='SELECT sno,l_name,ifnull(d_filter,\'\')d_filter,ifnull(link,\'\') link FROM library WHERE STATUS=1 ORDER BY l_name';
 														$qry_category = mysqli_query($con, $qry_category);
 								while ($rows_mastercategory = mysqli_fetch_assoc($qry_category))
 								{
                                     ?>
-                                    <!-- <li class="<?php echo $rows_mastercategory['d_filter'] ?> card-container col-lg-4 col-md-6 col-sm-6 ">-->
-                                        <div class="card-header" id="headingOne">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne<?php echo $a; ?>" aria-expanded="false" aria-controls="collapseOne">
-                                                        <font style="font-size: 17px"><?php echo $row['d_filter'] ?></font>
-                                                    </button>
-                                                </h5>
-                                            </div>
-										<div class="box gallery-box">
-                                            <!--										<div class="media img-effect">-->
-                                            <!--											<a href="/activities/clubs/details/?club=-->
-                                            <?php //echo base64_encode($rows_mastercategory['sno']*101995);
-                                            ?><!--">-->
-                                            <!--											<img style="height:300px" width="500px" src="/images/activities/clubs/-->
-                                            <?php //echo $rows_mastercategory['sno']
-                                            ?><!--.jpg"  alt="">-->
-                                            <!--                                            </a>-->
-                                            <!--											-->
-                                            <!--										</div>-->
-                                            <div class="dez-info p-a30 bg-white">
+							<div class="col-sm-4 col-md-6 mt-3">
+                            <div class="card">
+                                               <div class="dez-info p-a30 bg-white">
                                                 <h5 class="dez-title m-t0"><a target="blank" style=""
                                                                               href="/lifeatkasc/library/=<?php echo base64_encode($rows_mastercategory['sno'] * 101995); ?>"><?php echo $rows_mastercategory['l_name'] ?></a>
                                                 </h5>
-
+												</div>
+												</div>
                                             </div>
-                                        </div>
+                                        
                                     </li>
 
                                     <?php
                                 }
-														
-														
 								?>
-								
-							</ul>
 						</div>
 					</div>
 				</div>
-			</div>
-                                            <div class="col-md-12"></div>
+	            <div class="col-md-12"></div>
                                         </div>
                                     </div>
 

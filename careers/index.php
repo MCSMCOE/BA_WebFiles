@@ -66,7 +66,8 @@
                                                     </u></h3><h4 align="center"></h4>
                                             </div>
 
-                                            <div class="row m-b30">
+                                            <!--<div class="row m-b30">-->
+											<div class="single-service">
 
                                                 <hr>
                                                 <h4 style="color: #000000; font-size:13pt" align="center">To Apply
@@ -80,13 +81,13 @@
 
                                                 <hr>
 
-                                                <h4 style="color: #000000; font-size:13pt" align="center">Download
+                                                <!--<h4 style="color: #000000; font-size:13pt" align="center">Download
                                                     Application<a href="/pdf/application1.docx"
                                                                   target="_blank"><font color="red">&emsp;<u>Click
                                                                 here</u></font></a></p>
                                                     <hr>
                                                     <p style="color: #000000; font-size:13pt">
-                                                </h4>
+                                                </h4>-->
 
                                                 <hr>
 

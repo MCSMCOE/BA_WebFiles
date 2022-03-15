@@ -1,4 +1,4 @@
-<?php 
+<?php header("Access-Control-Allow-Origin: *");
 $connc=codb();
 ?>
 
@@ -90,7 +90,8 @@ $localIP            =   getHostByName(getHostName());
 $current_date       =   date("Y-m-d");
 $ipAddress = $_SERVER['REMOTE_ADDR'];
 if (array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER)) {
-    $ipAddress = array_pop(explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']));
+	$temp=explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+    $ipAddress = array_pop($temp);
 }
 $qry_category      =    "select * from counter_ipaddress where ipaddressval = '$localIP' && server_ipAddress = '$ipAddress'";
 $qry_category      =    mysqli_query($connc, $qry_category);

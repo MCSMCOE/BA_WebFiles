@@ -9,7 +9,7 @@
 		$con=locdb();
 		$con1=campsdb();
 		?>
-		<title>Kaamadhenu Arts and Science College</title>
+		<title>KAamadhenu Arts and Science College</title>
 		<?php include ("inc/headerscript.php"); ?>
 		
 	</head>
@@ -278,7 +278,7 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-md-12 text-center section-head">
-										<h2 class="fw7">Picture Ledge</h2>
+										<h2 class="fw7"><color="08afc2">Picture Ledge</h2> 
 									</div>
 								</div>
 								<div class="row">

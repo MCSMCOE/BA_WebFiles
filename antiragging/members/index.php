@@ -89,12 +89,12 @@
 									<td>Member</td>
                                 </tr>
                                 <tr>
-                                <tr>
+                                <!-- <tr>
                                     <td style="text-align: center;"></td>
                                     <td>Mr.K.Karthick</td>
                                     <td>Administrative officer</td>
 									<td>Member</td>
-                                </tr>
+                                </tr> -->
                                 <tr>
                                     <td style="text-align: center;"></td>
                                     <td>Mr.V.Thangarasu</td>

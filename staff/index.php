@@ -79,14 +79,14 @@ header();
             <!-- Team member -->
             <?php
 						$incval=0;
-						$qry_category="SELECT staff_master.staff_id AS staff_id,LOWER(master_desigination.desigination)desigination,
+						$qry_category="SELECT staff_master.staff_id AS staff_id,master_desigination.desigination desigination,
 GROUP_CONCAT(staff_promotion.md_id),
-staff_master.legend , LOWER(staff_master.first_name)first_name
+staff_master.legend , CONCAT(staff_master.first_name,' ',staff_master.last_name)first_name
 , staff_master.department_id,master_department.dept_name
 , staff_photo.photo ,  staff_promotion.status
-, staff_qualification.status,staff_promotion.from_date,GROUP_CONCAT(deg_type ORDER BY staff_qualification.yop DESC) deg_type FROM
+, staff_qualification.status,staff_promotion.from_date,GROUP_CONCAT(deg_type ORDER BY staff_qualification.yop) deg_type FROM
 camps.staff_master INNER JOIN camps.master_department
-ON (staff_master.department_id = master_department.department_id)
+ON (staff_master.department_id = master_department.department_id AND staff_master.sc_id=1)
 INNER JOIN camps.staff_photo
 ON (staff_photo.staff_id = staff_master.staff_id)
 INNER JOIN camps.staff_promotion
@@ -95,7 +95,7 @@ INNER JOIN camps.staff_qualification
 ON (staff_qualification.staff_id = staff_master.staff_id AND staff_qualification.status=1)
 INNER JOIN camps.master_desigination ON master_desigination.md_id=staff_promotion.md_id
 INNER JOIN camps.staff_degree_type
-ON (staff_qualification.degree_id = staff_degree_type.degree_id) WHERE staff_promotion.status=2 AND staff_degree_type.degree_id NOT IN (23,24) AND  staff_master.working_status='working' AND master_department.department_id=6 GROUP BY staff_master.staff_id
+ON (staff_qualification.degree_id = staff_degree_type.degree_id) WHERE staff_promotion.status=2 AND staff_degree_type.degree_id NOT IN (23,24) AND  staff_master.working_status='working' AND master_department.department_id='". $dep_id . "' GROUP BY staff_master.staff_id
 ;
 						";
 						$qry_category = mysqli_query($conc, $qry_category);

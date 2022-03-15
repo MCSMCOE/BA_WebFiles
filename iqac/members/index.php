@@ -100,12 +100,12 @@
                                     <td>Vice Principal</td>
 									<td>Member</td>
                                 </tr>
-                                <tr>
+                                <!--<tr>
                                     <td style="text-align: center;"></td>
                                     <td>Mr. K. Karthick</td>
                                     <td>Administrative Officer</td>
 									<td>Member</td>
-                                </tr>
+                                </tr>-->
 
                                 <tr>
                                     <td style="text-align: center;"></td>

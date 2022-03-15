@@ -46,8 +46,8 @@
                             <li><a href="/antiragging/members/" target="_blank">Anti Ragging Committee</a></li>
                             <li><a href="https://forms.gle/2xCxn2rEJy9DVqAJA" target="_blank">Grievance Committee</a></li>
 									<li><a href="https://forms.gle/2xCxn2rEJy9DVqAJA" target="_blank">Internal Complaints Committee</a></li>
-                            <li><a href="https://www.onlinesbi.com/sbicollect/icollecthome.htm" target="_blank">Online
-                                    Fee Payment</a></li>
+                            <!--<li><a href="https://www.onlinesbi.com/sbicollect/icollecthome.htm" target="_blank">Online
+                                    Fee Payment</a></li>-->
 
 
                         </ul>
@@ -67,15 +67,15 @@
                                                 <li><a target="_blank" href="https://www.youtube.com/kascsathy"
                                                        class="site-button youtube circle "><i
                                                                 class="fa fa-youtube-play"></i></a></li>
-                                                <li><a target="_blank" href="https://in.linkedin.com/kascsathy/"
+                                                <li><a target="_blank" href="https://www.linkedin.com/in/kascsathy"
                                                        class="site-button linkedin circle "><i
                                                                 class="fa fa-linkedin"></i></a></li>
-                                                <li><a target="_blank" href="http://instagram.com/kascsathy"
+                                                <li><a target="_blank" href="https://www.instagram.com/kaamadhenuarts/?hl=en"
                                                        class="site-button instagram circle "><i
                                                                 class="fa fa-instagram"></i></a></li>
-                                                <li><a target="_blank" href="https://twitter.com/kascsathy"
+                                               <!-- <li><a target="_blank" href="https://twitter.com/kascsathy"
                                                        class="site-button twitter circle "><i class="fa fa-twitter"></i></a>
-                                                </li>
+                                                </li>-->
 										</ul>
                         <ul style="text-transform: none;">
 

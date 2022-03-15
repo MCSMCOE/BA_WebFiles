@@ -140,7 +140,7 @@
     </thead>
     <?php
     $incval=0;
-    $qrype_category="SELECT sq.sq_id AS id,sdt.deg_type,sq.degree,sq.spec,sq.institute,sq.university_id,sq.mark,sq.yop,mu.`university_name` FROM staff_qualification sq JOIN camps.`staff_degree_type` sdt ON sdt.`degree_id`=sq.`degree_id` JOIN camps.`master_university` mu ON mu.`university_id`=sq.`university_id`  WHERE sq.status>0 AND sq.staff_id=${staff_id}";
+    $qrype_category="SELECT sq.sq_id AS id,sdt.deg_type,sq.degree,sq.spec,sq.institute,sq.university_id,sq.mark,sq.yop,mu.`university_name` FROM staff_qualification sq JOIN camps.`staff_degree_type` sdt ON sdt.`degree_id`=sq.`degree_id` AND sq.`degree_id` NOT IN (23,24) JOIN camps.`master_university` mu ON mu.`university_id`=sq.`university_id`  WHERE sq.status>0 AND sq.staff_id=${staff_id}";
     $qrype_category = mysqli_query($conc, $qrype_category);
     if(mysqli_num_rows($qrype_category)>0)
     {
@@ -185,7 +185,7 @@
     </thead>
     <?php
     $incval=0;
-    $qrype_category="SELECT se.se_id as id,se.staff_id,se.experience_type,se.name_of_organization,se.designation,se.dept,date_format(se.from_date,'%d-%m-%Y')from_date,date_format(se.to_date,'%d-%m-%Y')to_date,TIMESTAMPDIFF(YEAR,`from_date`,`to_date`+ INTERVAL 1 DAY) AS ` year`,MOD(TIMESTAMPDIFF(MONTH,`from_date`,`to_date`+ INTERVAL 1 DAY),12)  AS `month` FROM staff_experience se WHERE se.status>0 AND se.staff_id=${staff_id}";
+    $qrype_category="SELECT se.se_id AS id,se.staff_id,se.experience_type,se.name_of_organization,se.designation,se.dept,DATE_FORMAT(se.from_date,'%d-%m-%Y')from_date,DATE_FORMAT(se.to_date,'%d-%m-%Y')to_date,CONCAT(FLOOR(TIMESTAMPDIFF(MONTH,from_date, IFNULL(to_date,NOW()))/12),' Year(s) ',MOD(TIMESTAMPDIFF(MONTH,from_date, IFNULL(to_date,NOW())),12) ,' Month(s)') yrs,IFNULL(CONCAT('<a target=\"_blank\" href=\"https://drive.google.com/open?id=',dm.doc_key,'\">',dm.dp_id,'</a>'),'') dp FROM staff_experience se LEFT JOIN (documentation.dp_data_map ddm INNER JOIN documentation.dp_master dm ON dm.dp_id=ddm.dp_id AND dm.status>0 AND ddm.dtdm_id=2) ON ddm.table_id=se.se_id AND ddm.status>0  WHERE se.status>0 AND se.staff_id='${staff_id}' AND se.from_date IS NOT NULL AND se.to_date IS NOT NULL  UNION SELECT '','','','','','',' Previous','Total',CONCAT(FLOOR(SUM(mon)/12),' Year(s) ',MOD(SUM(mon),12) ,' Month(s)') yrs,'' FROM  (SELECT se.se_id AS id,se.staff_id,se.experience_type,se.name_of_organization,se.designation,se.dept,DATE_FORMAT(se.from_date,'%d-%m-%Y')from_date,DATE_FORMAT(se.to_date,'%d-%m-%Y')to_date,TIMESTAMPDIFF(MONTH,from_date, IFNULL(to_date,NOW()))mon FROM staff_experience se WHERE se.status>0 AND se.staff_id='${staff_id}' AND se.from_date IS NOT NULL AND se.to_date IS NOT NULL )a HAVING yrs IS NOT NULL  UNION SELECT '',sp.staff_id,mo.institute_type,mo.org_name,md.desigination,'',DATE_FORMAT(sp.from_date,'%d-%m-%Y'),DATE_FORMAT(IFNULL(sp.to_date,DATE(NOW())),'%d-%m-%Y') to_date,CONCAT(FLOOR(TIMESTAMPDIFF(MONTH,from_date, IFNULL(to_date,NOW()))/12),' Year(s) ',MOD(TIMESTAMPDIFF(MONTH,from_date, IFNULL(to_date,NOW())),12) ,' Month(s)') yrs,IFNULL(CONCAT('<a target=\"_blank\" href=\"https://drive.google.com/open?id=',dm.doc_key,'\">',dm.dp_id,'</a>'),'') dp FROM camps.staff_promotion sp INNER JOIN camps.master_desigination md ON sp.md_id=md.md_id INNER JOIN camps.master_organization mo ON mo.status>0 LEFT JOIN (documentation.dp_data_map ddm INNER JOIN documentation.dp_master dm ON dm.dp_id=ddm.dp_id AND dm.status>0 AND ddm.dtdm_id=3) ON ddm.table_id=sp.sp_id AND ddm.status>0 WHERE sp.staff_id='${staff_id}' AND sp.status>0 UNION SELECT '','','','','','','Current ','Total',yrs,'' FROM  (SELECT CONCAT('',TIMESTAMPDIFF(YEAR,sm.doj,IFNULL(sm.dor,NOW())),' Year(s) ',MOD(TIMESTAMPDIFF(MONTH,sm.doj,IFNULL(sm.dor,NOW())),12),' Month(s) ')yrs FROM camps.staff_master sm WHERE sm.staff_id='${staff_id}' )a HAVING yrs IS NOT NULL "; 
     $qrype_category = mysqli_query($conc, $qrype_category);
     if(mysqli_num_rows($qrype_category)>0)
     {
@@ -199,8 +199,7 @@
     <td><?php echo $rows_mastercategory['designation'] ?></td>
     <td><?php echo $rows_mastercategory['from_date'] ?></td>
     <td><?php echo $rows_mastercategory['to_date'] ?></td>
-    <td><?php echo $rows_mastercategory['year'] ?>Year(s) &amp;
-    <?php echo $rows_mastercategory['month'] ?>Month(s)</td>
+    <td><?php echo $rows_mastercategory['yrs'] ?></td>
     </tr>
     </tbody>
     <?php

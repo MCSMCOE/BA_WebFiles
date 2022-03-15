@@ -34,7 +34,7 @@
 					?>
                 <div class="container">
                     <div class="bnr-inr-entry text-center">
-                        <h1 class="text-capitalize"><span>Online Admission (2021-2022)</h1>
+                        <h1 class="text-capitalize"><span>Online Admission (2022-2023)</h1>
                     </div>
                 </div>
             </div>
